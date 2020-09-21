@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wz7-DK-ELL">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gf1-mb-4Wx">
+            <objects>
+                <navigationController storyboardIdentifier="MafiaID" id="Wz7-DK-ELL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UJx-vl-b7E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ndk-um-4on" kind="relationship" relationship="rootViewController" id="4rh-r4-2NV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBl-z6-TcQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-870" y="-276"/>
+        </scene>
+        <!--Настройка Игры-->
+        <scene sceneID="0RM-xH-9xi">
+            <objects>
+                <viewController id="Ndk-um-4on" customClass="ViewController" customModule="Mafia_Master_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jOh-Ab-fZ6" userLabel="Settings">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5a-if-jGg">
+                                <rect key="frame" x="110" y="613" width="155" height="33"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
+                                <state key="normal" title="Раздать карты">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dealCardsButtonDidTap:" destination="Ndk-um-4on" eventType="touchUpInside" id="WcM-1K-3iW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество игроков" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KK-Co-re9">
+                                <rect key="frame" x="19" y="280" width="185" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEf-b7-szt">
+                                <rect key="frame" x="239" y="280" width="11.5" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minimumValue="5" maximumValue="24" translatesAutoresizingMaskIntoConstraints="NO" id="4Gv-Qz-LhW">
+                                <rect key="frame" x="262.5" y="274" width="94" height="32"/>
+                                <connections>
+                                    <action selector="peopleStepperDidChange:" destination="Ndk-um-4on" eventType="valueChanged" id="dny-vl-Z2U"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество мафии" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKw-F0-iG0">
+                                <rect key="frame" x="19" y="321" width="175.5" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fX-kk-GrF">
+                                <rect key="frame" x="239" y="321" width="11.5" height="21"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PO-iC-i9G">
+                                <rect key="frame" x="51" y="362" width="273" height="33"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="17"/>
+                                <state key="normal" title="Дополнительные персонажи">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fxe-Ry-6e8" kind="show" id="ZjS-z9-7T5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AKw-F0-iG0" firstAttribute="top" secondItem="1KK-Co-re9" secondAttribute="bottom" constant="20" id="1IY-wv-daI"/>
+                            <constraint firstItem="4Gv-Qz-LhW" firstAttribute="leading" secondItem="eEf-b7-szt" secondAttribute="trailing" constant="12" id="3sR-VX-eo4"/>
+                            <constraint firstItem="1KK-Co-re9" firstAttribute="leading" secondItem="ovk-wq-gF6" secondAttribute="leading" constant="19" id="4BF-7q-fOU"/>
+                            <constraint firstItem="1PO-iC-i9G" firstAttribute="top" secondItem="AKw-F0-iG0" secondAttribute="bottom" constant="20" id="BpR-Ug-e3S"/>
+                            <constraint firstItem="eEf-b7-szt" firstAttribute="top" secondItem="ovk-wq-gF6" secondAttribute="top" constant="236" id="EH1-Jh-90G"/>
+                            <constraint firstItem="9fX-kk-GrF" firstAttribute="top" secondItem="eEf-b7-szt" secondAttribute="bottom" constant="20" id="GKR-B6-yRc"/>
+                            <constraint firstItem="1PO-iC-i9G" firstAttribute="leading" secondItem="ovk-wq-gF6" secondAttribute="leading" constant="51" id="Ga9-NO-5L9"/>
+                            <constraint firstItem="ovk-wq-gF6" firstAttribute="trailing" secondItem="9fX-kk-GrF" secondAttribute="trailing" constant="124.5" id="IlB-77-0N4"/>
+                            <constraint firstItem="ovk-wq-gF6" firstAttribute="trailing" secondItem="U5a-if-jGg" secondAttribute="trailing" constant="110" id="Kml-rD-ROw"/>
+                            <constraint firstItem="AKw-F0-iG0" firstAttribute="leading" secondItem="ovk-wq-gF6" secondAttribute="leading" constant="19" id="SxL-Gv-2uQ"/>
+                            <constraint firstItem="1KK-Co-re9" firstAttribute="top" secondItem="ovk-wq-gF6" secondAttribute="top" constant="236" id="Uyb-F4-eIl"/>
+                            <constraint firstItem="U5a-if-jGg" firstAttribute="leading" secondItem="ovk-wq-gF6" secondAttribute="leading" constant="110" id="iUG-Y0-ZXT"/>
+                            <constraint firstItem="ovk-wq-gF6" firstAttribute="bottom" secondItem="U5a-if-jGg" secondAttribute="bottom" constant="21" id="mXB-dh-hTX"/>
+                            <constraint firstItem="ovk-wq-gF6" firstAttribute="trailing" secondItem="1PO-iC-i9G" secondAttribute="trailing" constant="51" id="qUW-JW-yXk"/>
+                            <constraint firstItem="4Gv-Qz-LhW" firstAttribute="top" secondItem="ovk-wq-gF6" secondAttribute="top" constant="230" id="sFw-Fb-b5W"/>
+                            <constraint firstItem="ovk-wq-gF6" firstAttribute="trailing" secondItem="4Gv-Qz-LhW" secondAttribute="trailing" constant="18.5" id="xPc-N0-32f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ovk-wq-gF6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Настройка Игры" id="OdU-qz-v5V"/>
+                    <connections>
+                        <outlet property="inscriptionOfMafiaLabel" destination="AKw-F0-iG0" id="em8-oU-94q"/>
+                        <outlet property="inscriptionOfPeopleLabel" destination="1KK-Co-re9" id="dlP-Q0-h0o"/>
+                        <outlet property="mafiaValueLabel" destination="9fX-kk-GrF" id="sJ7-11-Vg5"/>
+                        <outlet property="peopleValueLabel" destination="eEf-b7-szt" id="gxJ-Bf-N5z"/>
+                        <outlet property="stepperOutlet" destination="4Gv-Qz-LhW" id="x4Z-Oo-jFT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9I-eK-jyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101.59999999999999" y="-275.61576354679806"/>
+        </scene>
+        <!--Выбирите карту-->
+        <scene sceneID="czP-F4-7eb">
+            <objects>
+                <viewController storyboardIdentifier="CardChooseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K8u-NM-kNE" customClass="CardChooseViewController" customModule="Mafia_Master_" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tGx-kL-5Ie">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XyY-DF-0xI">
+                            <size key="itemSize" width="376" height="662"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCollectionViewCell" id="6XU-gX-848" customClass="CardCollectionViewCell" customModule="Mafia_Master_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="2.5" width="376" height="662"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="662"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleAspectFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BQ-zp-2uM">
+                                            <rect key="frame" x="44" y="105" width="288" height="451"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="451" id="6cN-Wu-K0R"/>
+                                                <constraint firstAttribute="width" constant="288" id="t4V-zO-ggf"/>
+                                            </constraints>
+                                            <state key="normal" image="backOfCard"/>
+                                            <connections>
+                                                <action selector="flipCard:" destination="6XU-gX-848" eventType="touchUpInside" id="5RN-Sg-NxO"/>
+                                            </connections>
+                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ABP-X3-YTj">
+                                            <rect key="frame" x="107" y="564" width="162" height="40.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игрок" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC9-CP-ng1" userLabel="playerLabel">
+                                                    <rect key="frame" x="0.0" y="0.0" width="107.5" height="40.5"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="33"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWk-eg-BEY" userLabel="numberOfPlayerLabel">
+                                                    <rect key="frame" x="119.5" y="0.0" width="42.5" height="40.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="hWk-eg-BEY" secondAttribute="height" multiplier="43:41" id="Fwj-px-F4W"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="33"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="6BQ-zp-2uM" firstAttribute="centerX" secondItem="6XU-gX-848" secondAttribute="centerX" id="8lY-oy-bx3"/>
+                                    <constraint firstItem="ABP-X3-YTj" firstAttribute="centerX" secondItem="6XU-gX-848" secondAttribute="centerX" id="Kh4-6P-2Id"/>
+                                    <constraint firstItem="6BQ-zp-2uM" firstAttribute="centerY" secondItem="6XU-gX-848" secondAttribute="centerY" id="PmU-FJ-M6m"/>
+                                    <constraint firstItem="ABP-X3-YTj" firstAttribute="top" secondItem="6BQ-zp-2uM" secondAttribute="bottom" constant="8" id="Tbm-h7-uZq"/>
+                                </constraints>
+                                <size key="customSize" width="376" height="662"/>
+                                <connections>
+                                    <outlet property="cardButton" destination="6BQ-zp-2uM" id="URW-MK-edK"/>
+                                    <outlet property="numberOfPlayerLabel" destination="hWk-eg-BEY" id="ORv-Ka-1E0"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Выбирите карту" id="OQd-yV-vxh">
+                        <barButtonItem key="backBarButtonItem" title="Настройка Игры" id="x4h-eB-yyF"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cardChooseCollectionView" destination="tGx-kL-5Ie" id="peg-9r-zwS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YUJ-0e-d63" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685.60000000000002" y="60.719640179910051"/>
+        </scene>
+        <!--Characters View Controller-->
+        <scene sceneID="L9n-7I-WQf">
+            <objects>
+                <viewController id="fxe-Ry-6e8" customClass="CharactersViewController" customModule="Mafia_Master_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a5r-7h-u5g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Маньяк" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K55-5a-mwF">
+                                <rect key="frame" x="20" y="64" width="96" height="27"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Путана" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbb-ah-iUl">
+                                <rect key="frame" x="20" y="101.5" width="86.5" height="27"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RUt-AJ-cTS">
+                                <rect key="frame" x="306" y="61" width="51" height="31"/>
+                                <connections>
+                                    <action selector="maniacSwitchDidChange:" destination="fxe-Ry-6e8" eventType="valueChanged" id="gZV-ue-3rW"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fii-f9-fxi">
+                                <rect key="frame" x="306" y="98" width="51" height="31"/>
+                                <connections>
+                                    <action selector="whoreSwitchDidChange:" destination="fxe-Ry-6e8" eventType="valueChanged" id="9Ly-NH-LkU"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qbb-ah-iUl" firstAttribute="top" secondItem="K55-5a-mwF" secondAttribute="bottom" constant="10.5" id="36S-HC-7o4"/>
+                            <constraint firstItem="qbb-ah-iUl" firstAttribute="leading" secondItem="HQr-Z2-R7X" secondAttribute="leading" constant="20" id="BuZ-IW-cqm"/>
+                            <constraint firstItem="HQr-Z2-R7X" firstAttribute="trailing" secondItem="RUt-AJ-cTS" secondAttribute="trailing" constant="20" id="MUN-xU-Am7"/>
+                            <constraint firstItem="K55-5a-mwF" firstAttribute="top" secondItem="HQr-Z2-R7X" secondAttribute="top" constant="20" id="PAR-r4-K0p"/>
+                            <constraint firstItem="RUt-AJ-cTS" firstAttribute="top" secondItem="HQr-Z2-R7X" secondAttribute="top" constant="17" id="RRC-6X-7KF"/>
+                            <constraint firstItem="Fii-f9-fxi" firstAttribute="top" secondItem="RUt-AJ-cTS" secondAttribute="bottom" constant="6" id="SV3-eG-vcZ"/>
+                            <constraint firstItem="K55-5a-mwF" firstAttribute="leading" secondItem="HQr-Z2-R7X" secondAttribute="leading" constant="20" id="cXD-gR-72z"/>
+                            <constraint firstItem="HQr-Z2-R7X" firstAttribute="trailing" secondItem="Fii-f9-fxi" secondAttribute="trailing" constant="20" id="nQy-04-h6q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HQr-Z2-R7X"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VDg-wV-8C9"/>
+                    <connections>
+                        <outlet property="inscriptionOfManiacLabel" destination="K55-5a-mwF" id="cmw-G4-fXK"/>
+                        <outlet property="inscriptionOfWhoreLabel" destination="qbb-ah-iUl" id="IRM-iy-dcM"/>
+                        <outlet property="maniacSwitch" destination="RUt-AJ-cTS" id="cyc-dJ-fe6"/>
+                        <outlet property="whoreSwitch" destination="Fii-f9-fxi" id="RWw-nS-Ica"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ku6-SN-2Va" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="-611"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backOfCard" width="188" height="263"/>
+    </resources>
+</document>
