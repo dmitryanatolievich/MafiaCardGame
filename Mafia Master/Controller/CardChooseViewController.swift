@@ -42,7 +42,7 @@ class CardChooseViewController: UIViewController {
             collectionViewFlowLayout.minimumInteritemSpacing = interItemSpacing
             cardChooseCollectionView.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
         }
-    }
+    }   
 }
 extension CardChooseViewController: UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
