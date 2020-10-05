@@ -86,7 +86,8 @@
 				FF34070023C5DE9B0025121F /* LaunchScreen.storyboard */,
 				FF34070323C5DE9B0025121F /* Info.plist */,
 			);
-			path = "Mafia Master";
+			name = "Mafia Master";
+			path = MafiaMaster;
 			sourceTree = "<group>";
 		};
 		FF854E3F23CF440D000D0082 /* Controller */ = {
@@ -136,7 +137,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FF3406ED23C5DE9A0025121F /* Build configuration list for PBXProject "Mafia Master " */;
+			buildConfigurationList = FF3406ED23C5DE9A0025121F /* Build configuration list for PBXProject "MafiaMaster" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -326,7 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XNV4TR2TYR;
-				INFOPLIST_FILE = "Mafia Master/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MafiaMaster/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,7 +346,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XNV4TR2TYR;
-				INFOPLIST_FILE = "Mafia Master/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MafiaMaster/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,7 +362,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF3406ED23C5DE9A0025121F /* Build configuration list for PBXProject "Mafia Master " */ = {
+		FF3406ED23C5DE9A0025121F /* Build configuration list for PBXProject "MafiaMaster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF34070423C5DE9B0025121F /* Debug */,
